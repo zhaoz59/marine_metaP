@@ -1,7 +1,7 @@
 library(data.table)
 library(tidyverse)
 
-ko.metaP=fread('metaP.ko.relative.abundance.csv')
+ko.metaP=fread('ko.metaP.csv')
 
 library(ggpubr)
 fraction.list=list(c("PA","FL"),c("FL","Exo"),c("PA","Exo"))

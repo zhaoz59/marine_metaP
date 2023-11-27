@@ -1,7 +1,7 @@
 library(data.table)
 library(tidyverse)
 
-ko.metaP=fread('metaP.ko.relative.abundance.csv')
+ko.metaP=fread('ko.metaP.csv')
 ko.metaP[1:6,1:6]
 
 

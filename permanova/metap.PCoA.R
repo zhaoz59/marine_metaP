@@ -3,7 +3,6 @@ library(tidyverse)
 library(vegan)
 library(ggplot2)
 library(ggsci)
-setwd("F:/10Global_Ocean_Proteome/05paper/MS/Final/submission/Nature Communications/revise/github/permanova")
 ko.metaP=fread('ko.metaP.csv')%>%tibble::column_to_rownames(.,"sample")
 permanova=adonis2(ko.metaP[,-c(1,2,3)]~ fraction, data = ko.metaP[,1:3])
 permanova
