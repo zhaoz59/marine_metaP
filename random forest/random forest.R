@@ -57,3 +57,40 @@ ko.imp.abd.fraction=ko.metaP%>%filter(ko%in%ko.imp)%>%
 
 ko.imp.abd.depth=ko.metaP%>%filter(ko%in%ko.imp)%>%
   aggregate(data=.,rel~sample+depth+ko,sum)
+
+#exam model accuracy
+
+pred.trim=predict(rf.trim, test.trim)
+
+confusionMatrix(pred.trim, test.trim$fraction)
+
+# Confusion Matrix and Statistics
+
+# Reference
+# Prediction Exo FL PA
+# Exo   5  0  0
+# FL    0  8  0
+# PA    0  0  7
+# 
+# Overall Statistics
+# 
+# Accuracy : 1          
+# 95% CI : (0.8316, 1)
+# No Information Rate : 0.4        
+# P-Value [Acc > NIR] : 1.1e-08    
+# 
+# Kappa : 1          
+# 
+# Mcnemar's Test P-Value : NA         
+# 
+# Statistics by Class:
+# 
+#                      Class: Exo Class: FL Class: PA
+# Sensitivity                1.00       1.0      1.00
+# Specificity                1.00       1.0      1.00
+# Pos Pred Value             1.00       1.0      1.00
+# Neg Pred Value             1.00       1.0      1.00
+# Prevalence                 0.25       0.4      0.35
+# Detection Rate             0.25       0.4      0.35
+# Detection Prevalence       0.25       0.4      0.35
+# Balanced Accuracy          1.00       1.0      1.00
