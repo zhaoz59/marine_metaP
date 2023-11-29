@@ -14,7 +14,11 @@ ko.metaP.matrix=ko.metaP%>%
   as.matrix()
 
 ko.metaP.matrix%>%dim
-#use KO >1% for quick run
+
+#use KO >1% for quick test run
+#can be skipped if use all data but takes longer time
+#but the result does not change much
+
 ko.metaP.matrix[,!colMaxs(ko.metaP.matrix)<1]%>%dim
 
 ko.metaP.matrix.trim=ko.metaP.matrix[,!colMaxs(ko.metaP.matrix)<1]
